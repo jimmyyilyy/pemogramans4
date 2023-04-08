@@ -61,7 +61,7 @@ class Mahasiswa extends BaseController
 	public function insert()
 	{
 		$model = new  M_Mahasiswa();
-		//$id = $this->request->getPost('id');
+		
 		$data = array (
 			'nim'  => $this->request->getPost('nim'),
 			'nama' => $this->request->getPost('nama'),

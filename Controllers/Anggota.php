@@ -60,7 +60,6 @@ class Anggota extends BaseController
 	public function insert()
 	{
 		$model = new  M_Anggota();
-		//$id = $this->request->getPost('id');
 		$data = array (
 			'nama' => $this->request->getPost('nama'),
 			'jabatan' => $this->request->getPost('jabatan'),

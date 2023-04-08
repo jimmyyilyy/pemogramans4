@@ -31,18 +31,7 @@ class Dosen extends BaseController
 		echo view('inputdosen_v');
 	}
 
-	public function insert()
-	{
-		$model = new  DosenModel();
-		//$id = $this->request->getPost('id');
-		$data = array (
-			'nidn'  => $this->request->getPost('nidn'),
-			'nama' => $this->request->getPost('nama'),
-			'matkul' => $this->request->getPost('matkul'),
-		);
-		$model->insertDosen($data);
-		return redirect()->to('/dosen');   
-	}
+	
 
 	public function update($id)
 	{
@@ -65,7 +54,18 @@ class Dosen extends BaseController
 	}
 
 
-	
+	public function insert()
+	{
+		$model = new  DosenModel();
+		
+		$data = array (
+			'nidn'  => $this->request->getPost('nidn'),
+			'nama' => $this->request->getPost('nama'),
+			'matkul' => $this->request->getPost('matkul'),
+		);
+		$model->insertDosen($data);
+		return redirect()->to('/dosen');   
+	}
 
 	
 	public function delete($id)
